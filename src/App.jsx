@@ -82,7 +82,7 @@ function App() {
 
   return (
     <div className="App">
-      <h3> USUARIOS </h3><FcAbout />
+      <h3>{ 'USER´S BIRTHDAY 🎉🎁' }</h3><FcAbout />
       <button onClick={getAllUsers}>Refresh Users</button>
       <button onClick={handleCreateNewUser}>+</button>
       <UsersForm  setUsers={setUsers} 
