@@ -1,0 +1,17 @@
+.backGroundForm {
+    z-index: 100;
+    min-height: 100vh;
+    width: 100vw;
+    /* display: fixed; */
+    /* filter: blur(5px); */
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    transition: 2s ease-in-out;
+}
+
+.isClose {
+    display: none;
+}
