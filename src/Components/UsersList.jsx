@@ -6,13 +6,13 @@ import {Modal, Container, ActionStyles} from './StyledComponents/StyledUsersList
 const UsersList = ({user, setUsers, setConfirmUser, formModal}) => {
     
     const confirmUser = (id) =>{
-        if(id === 123) return   
+        if(id === 12300000) return   
         const user = setUsers.users.data.find(user=>user.id===id)
         setConfirmUser(prev=>({...prev, user:user, closeModal:false}))
     }
     
     const editUser = (id) => {
-        if(id === 123) return
+        if(id === 12300000) return
         const user = setUsers.users.data.find(user=>user.id===id)
         setUsers.setUser((prev)=>({...prev, mode:"put"}))
         setConfirmUser(prev=>({...prev, user:user}))
@@ -39,16 +39,16 @@ const UsersList = ({user, setUsers, setConfirmUser, formModal}) => {
             </ul>
             <div>
                 <ActionStyles 
-                    color={user.id !== 123 ? "" : "grey"}
-                    active={user.id !== 123 ? 1 : 0}  
+                    color={user.id !== 12300000 ? "" : "grey"}
+                    active={user.id !== 12300000 ? 1 : 0}  
                     >
                 <i onClick={()=>{confirmUser(user.id)}} >
                     <BsTrash />
                 </i>
                 </ActionStyles>
                 <ActionStyles 
-                    color={user.id !== 123 ? "" : "grey"}
-                    active={user.id !== 123 ? 1 : 0}  
+                    color={user.id !== 12300000 ? "" : "grey"}
+                    active={user.id !== 12300000 ? 1 : 0}  
                     >
                 <i onClick={()=>editUser(user.id)}>
                     <BsPencilFill />

@@ -10,7 +10,7 @@ import UsersForm from './Components/UsersForm';
 
 function App() {
   const defaultUser = [{
-    id: 123,
+    id: 12300000,
       first_name: 'Admin (default)',
       last_name: '',
       email: 'admin@users.com',
@@ -48,7 +48,7 @@ function App() {
   // Eliminate a user with their id
   const deleteUser = (id) => {
     
-    if(id === 123) return
+    if(id === 12300000) return
     const url = `http://144.126.218.162:9000/users/${id}/`
     axios.delete(url)
     .then(res=>{
@@ -57,7 +57,6 @@ function App() {
       
       setTimeout(()=>{
         setConfirmUser(prev=>({...prev, closeConfirm: true}))
-        console.log(confirmUser)
       }, 3000)
 
     })
@@ -65,8 +64,8 @@ function App() {
 }
 
   const handleCreateNewUser = () => {
-    setCloseForm(false)
     setUsers((prev)=>({...prev, mode: "post"}))
+    setCloseForm(false)
   }  
 
   if(users.mode === "put" && confirmUser.user && !closeForm){
