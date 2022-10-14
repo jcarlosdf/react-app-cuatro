@@ -1,7 +1,6 @@
-import axios from 'axios'
 import React from 'react'
 import { BsGiftFill, BsTrash, BsPencilFill } from "react-icons/bs"
-import {Modal, Container, ActionStyles} from './StyledComponents/StyledUsersList'
+import { Container, ActionStyles} from './StyledComponents/StyledUsersList'
 
 const UsersList = ({user, setUsers, setConfirmUser, formModal}) => {
     

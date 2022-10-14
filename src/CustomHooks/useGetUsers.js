@@ -1,13 +1,12 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const useGetUsers = (url, method) => {
-    // const [response, setResponse] = useState()
-    const response = []
-    // useEffect(()=>{
+    const [response, setResponse] = useState()
+    useEffect(()=>{
         axios[method](url)
-        .then(res=>response = res.data)
-    // },[])
+        .then(res=>setResponse(res.data))
+    },[])
   return response
 }
 

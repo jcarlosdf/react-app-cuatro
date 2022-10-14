@@ -1,5 +1,4 @@
 import React, {useEffect, useCallback} from 'react'
-// import useGetUsers from '../CustomHooks/useGetUsers'
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
 import {InputErrors, FormContainer} from './StyledComponents/StyledUsersForm'

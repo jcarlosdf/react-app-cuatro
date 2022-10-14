@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { FaBeer } from 'react-icons/fa';
 import { FcAbout } from "react-icons/fc";
 import './App.css'
-import useGetUsers from './CustomHooks/useGetUsers';
 import UsersList from './Components/UsersList';
 import UsersForm from './Components/UsersForm';
 
