@@ -34,7 +34,7 @@ const UsersForm = ({setUsers, users, closeForm, userId}) => {
         
         axios["post"](url, data)
         .then(res=>{
-            console.log(res)
+            // console.log(res)
             reset(formValues)
             closeForm.setClose(true)
             setUsers({
@@ -42,7 +42,7 @@ const UsersForm = ({setUsers, users, closeForm, userId}) => {
                 data: [], 
                 mode:"get"
               })
-              console.log(data)
+            //   console.log(data)
         })
         .catch(error => console.error(error.message))
         
@@ -55,7 +55,7 @@ const UsersForm = ({setUsers, users, closeForm, userId}) => {
         axios["put"](url, data)
         .then(res=>{
 
-            console.log(res)
+            // console.log(res)
 
             reset(formValues)
             closeForm.setClose(true)

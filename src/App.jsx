@@ -56,7 +56,11 @@ function App() {
       setTimeout(()=>{
         setConfirmUser(prev=>({...prev, closeConfirm: true}))
       }, 3000)
-
+      setUsers({
+        loading:false, 
+        data: [], 
+        mode:"get"
+      })
     })
     .catch(error=>console.error(error))
 }
@@ -80,7 +84,8 @@ function App() {
   return (
     <div className="App">
       <h3>{ 'USER´S BIRTHDAY 🎉🎁' }</h3><FcAbout />
-      <button onClick={getAllUsers}>Refresh Users</button>
+      <button onClick={()=>{setUsers({loading:true, data: [], mode:"get"})}}>
+        Refresh Users</button>
       <button onClick={handleCreateNewUser}>+</button>
       <UsersForm  setUsers={setUsers} 
                   users = {users}
